@@ -1,0 +1,187 @@
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+}
+
+a h2{
+    text-decoration: none;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Estilos del sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding-top: 20px;
+}
+
+.sidebar-header h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #3498db;
+}
+
+.sidebar-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-nav ul li {
+    padding: 10px 20px;
+}
+
+.sidebar-nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-nav ul li a i {
+    margin-right: 10px;
+}
+
+.sidebar-nav ul li:hover {
+    background-color: #34495e;
+}
+
+/* Estilos del contenido principal */
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.main-header h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Estilos del buscador */
+.search-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.search-form input,
+.search-form select,
+.search-form button {
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+}
+
+.search-form input {
+    flex: 1;
+}
+
+.search-form button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-form button:hover {
+    background-color: #2980b9;
+}
+
+/* Estilos de las vacantes destacadas */
+.featured-vacancies {
+    margin-top: 30px;
+}
+
+.vacancy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.vacancy-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.vacancy-card:hover {
+    transform: translateY(-5px);
+}
+
+.vacancy-card h3 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+.vacancy-card .company {
+    color: #7f8c8d;
+    font-weight: bold;
+}
+
+.vacancy-card .location {
+    color: #95a5a6;
+    margin-bottom: 10px;
+}
+
+.vacancy-card .description {
+    color: #34495e;
+    margin-bottom: 15px;
+}
+
+.btn-detail {
+    display: inline-block;
+    background-color: #2ecc71;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn-detail:hover {
+    background-color: #27ae60;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        order: 2;
+    }
+
+    .main-content {
+        order: 1;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    .search-form input,
+    .search-form select,
+    .search-form button {
+        width: 100%;
+    }
+}
